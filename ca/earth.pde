@@ -21,6 +21,14 @@ class earth
     this.earthIma = earthIma;
     noStroke();
     earthS = createShape(SPHERE, size);
-    
+  }
+  void drawEarth()
+  {
+    pushMatrix();
+    translate(width/2, height/2, 0);
+    earthS.rotateY(rotSpeed);
+    earthS.setEarthIma(earthIma);
+    shape(earthS);
+    popMatrix();
   }
 }
