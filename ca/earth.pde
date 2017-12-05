@@ -13,4 +13,14 @@ class earth
     rotSpeed = 0;
     
   }
+  earth(float size, float rot, float rotSpeed, PImage earthIma)
+  {
+    this.size = size;
+    this.rot = rot;
+    this.rotSpeed = rotSpeed;
+    this.earthIma = earthIma;
+    noStroke();
+    earthS = createShape(SPHERE, size);
+    
+  }
 }
