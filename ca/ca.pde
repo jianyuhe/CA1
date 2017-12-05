@@ -1,8 +1,9 @@
 void setup()
 {
-  fullScreen(P3D);
+  size(1000,1000,P3D);
   smooth();
-  e = new earth(300.33, 533.44, 33.55);
+  e = new earth(100, 0.1);
+  frameRate(30);
 }
 earth e;
 
