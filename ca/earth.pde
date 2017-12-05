@@ -6,4 +6,11 @@ class earth
   float radius;
   PImage earthIma;
   PShape earthS;
+  earth()
+  {
+    size = 0;
+    rot = 0;
+    rotSpeed = 0;
+    
+  }
 }
