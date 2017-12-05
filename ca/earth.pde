@@ -5,7 +5,7 @@ class earth
   float rotSpeed;
   float radius;
   PImage earthIma;
-  PShape earthS;
+  PShape globe;
   earth()
   {
     size = 0;
@@ -13,22 +13,23 @@ class earth
     rotSpeed = 0;
     
   }
-  earth(float size, float rot, float rotSpeed, PImage earthIma)
+  earth(float size, float rot, float rotSpeed)
   {
     this.size = size;
     this.rot = rot;
     this.rotSpeed = rotSpeed;
-    this.earthIma = earthIma;
+    earthIma =loadImage("earth.jpg");
+    
     noStroke();
-    earthS = createShape(SPHERE, size);
+    globe = createShape(SPHERE, size);
   }
   void drawEarth()
   {
     pushMatrix();
     translate(width/2, height/2, 0);
-    earthS.rotateY(rotSpeed);
-    earthS.setEarthIma(earthIma);
-    shape(earthS);
+    globe.rotateY(rotSpeed);
+    globe.setTexture(earthIma);
+    shape(globe);
     popMatrix();
   }
 }
