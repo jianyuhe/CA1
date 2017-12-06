@@ -29,11 +29,11 @@ class earth
     }
     if(checkKey('d'))
     {
-      translateX += 1;
+      translateX -= 1;
     }
     if(checkKey('a'))
     {
-      translateX -= 1;
+      translateX += 1;
     }
   }
   void drawEarth()
