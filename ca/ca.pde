@@ -40,4 +40,5 @@ void draw()
  p.drawPanel();
  p.drawMoveW();
  mousePressed();
+ p.drawMoveD();
 }
