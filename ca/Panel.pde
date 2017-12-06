@@ -1,5 +1,6 @@
 class Panel
 {
+  PShape moveW;
   void drawPanel()
   {
    // rect(0, height-(height/4), width, height/4);
@@ -15,5 +16,19 @@ class Panel
     vertex(0,height/2);
     endShape(CLOSE);
     fill(0,255,255);
+    
+    moveW = createShape();
+    moveW.beginShape();
+    moveW.fill(120);
+   moveW.stroke(0);
+    moveW.vertex(width/2, height-(height/4.2));
+    moveW.vertex(width/2+width*.01f, height-(height/4.6));
+    moveW.vertex(width/2+width*.01f, height-(height/4.9));
+    moveW.vertex(width/2-width*.01f, height-(height/4.9));
+    moveW.vertex(width/2-width*.01f, height-(height/4.6));
+    moveW.endShape(CLOSE);
+    shape(moveW);
+    
   }
+
 }
