@@ -41,4 +41,8 @@ void draw()
  p.drawMoveW();
  mousePressed();
  p.drawMoveD();
+ p.drawMoveS();
+ p.drawMoveA();
+ p.drawRadar();
+ p.update();
 }
