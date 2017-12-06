@@ -16,8 +16,12 @@ class Panel
     vertex(0,height/2);
     endShape(CLOSE);
     fill(0,255,255);
+   
     
-    moveW = createShape();
+  }
+  void drawMoveW()
+  {
+     moveW = createShape();
     moveW.beginShape();
     moveW.fill(120);
    moveW.stroke(0);
@@ -28,7 +32,6 @@ class Panel
     moveW.vertex(width/2-width*.01f, height-(height/4.6));
     moveW.endShape(CLOSE);
     shape(moveW);
-    
   }
 
 }
