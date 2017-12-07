@@ -1,10 +1,12 @@
+PImage bg;
 void setup()
 {
-  fullScreen(P3D);
+  size(1280,720,P3D);
   smooth();
   e = new earth(10, 0.1);
   p = new Panel();
-  frameRate(30);
+  frameRate(68);
+  bg = loadImage("bg.jpg");
 }
 earth e;
 Panel p;
@@ -34,7 +36,7 @@ void mousePressed()
 }
 void draw()
 {
- background(0);
+ background(bg);
  e.drawEarth(); 
  e.update();
  p.drawPanel();

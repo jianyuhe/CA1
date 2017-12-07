@@ -14,7 +14,7 @@ class earth
     this.rotSpeed = rotSpeed;
     earthIma =loadImage("earth.jpg");
     noStroke();
-    globe = createShape(SPHERE, size);
+      globe = createShape(SPHERE, size);
    
   }
   void update()
@@ -35,14 +35,22 @@ class earth
     {
       translateX += 1;
     }
+    if(checkKey('q'))
+    {
+      translateY += 1;
+    }
+    if(checkKey('e'))
+    {
+      translateY -= 1;
+    }
   }
   void drawEarth()
   {
     pushMatrix();
-    translate(translateX, height/2, translateZ);
+    translate(translateX, translateY, translateZ);
     globe.rotateY(-rotSpeed);
     globe.setTexture(earthIma);
-    shape(globe);
+    shape(globe,width/2,height/2,80,80);
     popMatrix();
   }
 }

@@ -1,31 +1,34 @@
 class Panel
 {
-  PShape Panel;
+  
   PShape moveW;
   PShape moveD;
   PShape moveS;
   PShape moveA;
   float theta;
-  float speed = (TWO_PI / 60.0) * 3;
+  float speed = (TWO_PI / 60.0) * 0.5;
   boolean moveWb = false;
+  PImage panelBackg;
+  
   void drawPanel()
   {
-   // rect(0, height-(height/4), width, height/4);
-   Panel = createShape();
-       Panel.beginShape();
-       Panel.fill(200);
-     Panel.vertex(0,height);
-     Panel.vertex(width, height);
-     Panel.vertex(width, height/2);
-     Panel.vertex(width-(width/8), height-(height/4));
-     Panel.vertex(width/2+width*.1f,height-(height/4));
-     Panel.vertex(width/2, height/2+height*.12);
-     Panel.vertex(width/2-width*.1f,height-(height/4));
-     Panel.vertex(width/8, height-(height/4));
-     Panel.vertex(0,height/2);
+    panelBackg =loadImage("3.jpg");
+  
+        beginShape();
+    
+        texture(panelBackg);
+      vertex(0,height,0,0,0);
+      vertex(width, height,0,400,0);
+      vertex(width, height/2,0,400,0);
+      vertex(width-(width/8), height-(height/4),0,0,400);
+      vertex(width/2+width*.1f,height-(height/4),0,0,400);
+      vertex(width/2, height/2+height*.12,0,400,0);
+      vertex(width/2-width*.1f,height-(height/4),0,400,0);
+      vertex(width/8, height-(height/4),0,0,400);
+      vertex(0,height/2,0,0,400);
       
-     Panel.endShape(CLOSE);
-     shape(Panel);
+      endShape(CLOSE);
+     
    
   }
   void drawMoveW()
