@@ -30,10 +30,7 @@ boolean checkKey(int k)
 }
 void mousePressed()  
 {
-  if(mousePressed)
-  {
-    e.translateZ += 1;
-  }
+
 }
 void draw()
 {
@@ -42,10 +39,10 @@ void draw()
  e.update();
  p.drawPanel();
  p.drawMoveW();
- mousePressed();
  p.drawMoveD();
  p.drawMoveS();
  p.drawMoveA();
  p.drawRadar();
- p.update();
+// p.update();
+ p.drawchar();
 }
