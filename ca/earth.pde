@@ -49,19 +49,24 @@ class earth
     }
   }
   void drawEarth()
-  {
-     pushMatrix();
+  {pushMatrix();
+ 
     translate(translateX, translateY, translateZ);
+   
+     pushMatrix();
+    translate(width/2,height/2,10);
     globe.rotateY(-rotSpeed);
     globe.setTexture(earthIma);
-    shape(globe,width/2,height/2);
-    pushMatrix();
-    translate(width/2,height/2, 100);
+    shape(globe);
+    
+    rotateZ(theta);
+    translate(width/2-width*.5f,height/2,20);
     moon.rotateY(theta);
     moon.setTexture(moonIma);
     shape(moon);
+   
     popMatrix();
     popMatrix();
-    theta += 0.01;
+    theta += 0.05;
   }
 }
