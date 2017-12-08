@@ -19,7 +19,7 @@ class earth
     noStroke();
       globe = createShape(SPHERE, size);
    moonIma = loadImage("moon.jpg");
-   moon = createShape(SHAPE,size);
+   moon = createShape(SPHERE,15);
   }
   void update()
   {  
@@ -50,7 +50,7 @@ class earth
   }
   void drawEarth()
   {
-    
+     pushMatrix();
     translate(translateX, translateY, translateZ);
     globe.rotateY(-rotSpeed);
     globe.setTexture(earthIma);
@@ -60,6 +60,7 @@ class earth
     moon.rotateY(theta);
     moon.setTexture(moonIma);
     shape(moon);
+    popMatrix();
     popMatrix();
     theta += 0.01;
   }
