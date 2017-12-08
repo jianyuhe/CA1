@@ -3,7 +3,7 @@ void setup()
 {
   size(1280,720,P3D);
   smooth();
-  e = new earth(10, 0.1);
+  e = new earth(40, 0.1);
   p = new Panel();
   frameRate(100);
   bg = loadImage("bg.jpg");
