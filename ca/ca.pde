@@ -45,4 +45,5 @@ void draw()
  p.drawRadar();
 // p.update();
  p.drawchar();
+
 }

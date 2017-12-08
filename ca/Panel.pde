@@ -12,9 +12,9 @@ class Panel
    PImage panelBackg;
    float RcharSpeed = 10;
     float Rh = -100;
-    float ESpeed = 8;
-    float EX = width*0.28;
-    
+    float ES = 8;
+    float EX = width*0.2;
+    float EX1 = width*0.4;
    
     void drawPanel()
     {
@@ -112,14 +112,18 @@ class Panel
  
  void drawRadar()
  {
-   float cx = width- width/10;
-   float cy = height- width/10;
+   float cx = width- width/11;
+   float cy = height- width/11;
    
    float radius = width*.05f;
   
      stroke(0, 255, 0);
      fill(0);
      ellipse(cx, cy, width*.1f, width*.1f);
+     for(int i=0; i<5;i++)
+     {
+       ellipse(cx, cy, width*.1f-i*width*.02f, width*.1f-i*width*.02f);
+     }
      int trailLength = 10;
      float greenIntensity = 255 / (float)trailLength;
   
@@ -149,11 +153,19 @@ class Panel
   rect(i*width*.005,height,width*.005,Rh+r);
   }
   
-  EX += ESpeed;
-  if(EX == width*0.23 || EX == width/2)
+     EX+=ES;
+     EX1-=ES;
+  if(EX == width*0.4 || EX == width*0.2)
   {
-    ESpeed = -ESpeed;
+    ES = - ES ;
   }
-  ellipse(EX,height-height*0.2f,20,20);
+  for(int i=0; i<10;i++)
+  {
+    float r = random(40);
+  line(width*0.2,(height-height*0.2f)+i*15,width*0.44,(height-height*0.2f)+i*15);
+  ellipse(EX+r,(height-height*0.2f)+i*15,10,10);
+   ellipse(EX1+r,(height-height*0.2f)+i*15,10,10);
+  }
  }
  }
+ 
