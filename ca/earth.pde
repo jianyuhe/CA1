@@ -21,27 +21,27 @@ class earth
   {
     if(checkKey('w'))
     {
-      translateZ += 1;
+      translateZ += 10;
     }
     if(checkKey('s'))
     {
-      translateZ -= 1;
+      translateZ -= 10;
     }
     if(checkKey('d'))
     {
-      translateX -= 1;
+      translateX -= 2;
     }
     if(checkKey('a'))
     {
-      translateX += 1;
+      translateX += 2;
     }
     if(checkKey('q'))
     {
-      translateY += 1;
+      translateY += 2;
     }
     if(checkKey('e'))
     {
-      translateY -= 1;
+      translateY -= 2;
     }
   }
   void drawEarth()
@@ -50,7 +50,7 @@ class earth
     translate(translateX, translateY, translateZ);
     globe.rotateY(-rotSpeed);
     globe.setTexture(earthIma);
-    shape(globe,width/2,height/2,80,80);
+    shape(globe,width/2,height/2);
     popMatrix();
   }
 }

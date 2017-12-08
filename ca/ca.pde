@@ -5,8 +5,9 @@ void setup()
   smooth();
   e = new earth(10, 0.1);
   p = new Panel();
-  frameRate(68);
+  frameRate(100);
   bg = loadImage("bg.jpg");
+  perspective(PI/3.0,(float)width/height,0.001,100000);
 }
 earth e;
 Panel p;
