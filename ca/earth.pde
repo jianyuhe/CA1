@@ -7,6 +7,8 @@ class earth
   PShape globe;
   PImage moonIma;
   PShape moon;
+  PImage asterIma;
+  PShape aster;
   float theta=0;
   float translateX;
   float translateY;
@@ -19,7 +21,9 @@ class earth
     noStroke();
       globe = createShape(SPHERE, size);
    moonIma = loadImage("moon.jpg");
-   moon = createShape(SPHERE,15);
+   moon = createShape(SPHERE,25);
+   asterIma = loadImage("small.jpg");
+   aster = createShape(SPHERE,5);
   }
   void update()
   {  
@@ -49,22 +53,33 @@ class earth
     }
   }
   void drawEarth()
-  {pushMatrix();
+  
+  {
+    
+    pushMatrix();
  
     translate(translateX, translateY, translateZ);
    
      pushMatrix();
-    translate(width/2,height/2,10);
+    translate(width/2,height/2,0);
     globe.rotateY(-rotSpeed);
     globe.setTexture(earthIma);
     shape(globe);
-    
-    rotateZ(theta);
+    pushMatrix();
+    rotate(theta);
     translate(width/2-width*.5f,height/2,20);
     moon.rotateY(theta);
     moon.setTexture(moonIma);
     shape(moon);
-   
+    
+    pushMatrix();
+    rotateZ(theta*2);
+    translate(width/2-width*.3f,height/2,0);
+    aster.setTexture(asterIma);
+    shape(aster);
+    
+   popMatrix();
+    popMatrix();
     popMatrix();
     popMatrix();
     theta += 0.05;
