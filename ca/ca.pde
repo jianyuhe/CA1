@@ -70,7 +70,11 @@ void mousePressed()
 void draw()
 {
  background(bg);
+pushMatrix();
+translate(e.translateX, e.translateY, e.translateZ);
  e.drawEarth(); 
+  drawPlanet();
+      popMatrix();
  e.update();
  p.drawPanel();
  p.drawMoveW();
@@ -79,6 +83,6 @@ void draw()
  p.drawMoveA();
  p.drawRadar();
  p.drawchar();
-drawPlanet();
+
 
 }

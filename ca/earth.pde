@@ -56,10 +56,12 @@ class earth
   
   {
     
-    pushMatrix();
- 
-    translate(translateX, translateY, translateZ);
    
+   
+    
+    noFill();
+    noStroke();
+   box(1500);
      pushMatrix();
     translate(width/2,height/2,0);
     globe.rotateY(-rotSpeed);
@@ -81,7 +83,7 @@ class earth
    popMatrix();
     popMatrix();
     popMatrix();
-    popMatrix();
+
     theta += 0.05;
   }
 }
