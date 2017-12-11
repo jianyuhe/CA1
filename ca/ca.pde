@@ -38,10 +38,10 @@ ArrayList<PImage> textures = new ArrayList<PImage>();
 
 ArrayList<Planet> planets = new ArrayList<Planet>();
 String[] planetNames = {"mer", "sdr", "aas", "fgg","ijg","iio","urh", "hhd"};
-float[] xg = {300,223,1000,299,463,0};
-float[] yg = {400,332,0,590,30,632};
-float[] zg = {0,34,24,35,10,64};
-float[] Size = {23,45,32,11,16,26};
+float[] xg = {300,223,1000,299,463,0,500,435};
+float[] yg = {400,332,0,590,30,632,23,654};
+float[] zg = {0,34,24,35,10,64,62,32};
+float[] Size = {23,45,32,11,16,26,64,32};
 
   void drawPlanet()
   {
