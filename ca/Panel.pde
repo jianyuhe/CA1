@@ -65,6 +65,14 @@ class Panel
      moveW.vertex(width/2-width*.01f, height-(height/4.2)+width*.01f);
      moveW.endShape(CLOSE);
      shape(moveW);
+     if(mousePressed)
+     {
+       if(mouseX >width/2-width*.01f && mouseX <width/2+width*.01f && mouseY >height-(height/4.2) && mouseY < height-(height/4.2)+width*.02)
+       {
+         e.translateY += 2;
+         
+       }
+     }
    }
    void drawMoveD()
    {
@@ -79,6 +87,13 @@ class Panel
     moveD.vertex(width/2+width*.01f,height-(height/4.2)+width*.04f);
     moveD.endShape(CLOSE);
      shape(moveD);
+     if(mousePressed)
+     {
+       if(mouseX>width/2+width*.01f && mouseX <width/2+width*.03f && mouseY >height-(height/4.2)+width*.02f && mouseY <height-(height/4.2)+width*.04f)
+       {
+         e.translateX -= 2;
+       }
+     }
    }
    void drawMoveS()
    {
@@ -93,7 +108,13 @@ class Panel
     moveS.vertex(width/2-width*.01f,height-(height/4.2)+width*.04f);
      moveS.endShape(CLOSE);
      shape(moveS);
-    
+    if(mousePressed)
+    {
+      if(mouseX >width/2-width*.01f && mouseX <width/2+width*.01f && mouseY >height-(height/4.2)+width*.04f && mouseY <height-(height/4.2)+width*.06f)
+      {
+        e.translateY -= 2;
+      }
+    }
    }
      void drawMoveA()
    {
@@ -108,6 +129,13 @@ class Panel
     moveA.vertex(width/2-width*.01f,height-(height/4.2)+width*.04f);
     moveA.endShape(CLOSE);
      shape(moveA);
+     if(mousePressed)
+     {
+       if(mouseX >width/2-width*.03f && mouseX <width/2-width*.01f && mouseY >height-(height/4.2)+width*.02f && mouseY <height-(height/4.2)+width*.04f)
+       {
+         e.translateX += 2;
+       }
+     }
    }
  
  void drawRadar()
@@ -145,7 +173,19 @@ class Panel
    fill(20);
    rect(width/2+width*.1f,height-(height/4.2)+width*.01f, width/2 - width*.3f, height/5);
    fill(255);
+   textAlign(CENTER);
    text("Spacecraft in flight....", width/2+width*.1f+(width/2 - width*.3f)/2,height-(height/4.2)+width*.01f+height/10);
+   if(mousePressed)
+   {
+     if(mouseX >width/2-width*.03f && mouseX < width/2+width*.03f && mouseY >height-(height/3.5) && mouseY <height-(height/4))
+     {
+        e.translateZ += 10;
+     }
+     else if(mouseX>width/2-width*.03f && mouseX < width/2+width*.03f && mouseY <height-(height/4.9)+width*.06f && mouseY >height-(height/4.4)+width*.06f)
+     {
+       e.translateZ -= 10;
+     }
+   }
  }      
  void drawchar()
  {
