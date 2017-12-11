@@ -15,22 +15,17 @@ void setup()
   PImage p4 =loadImage("4,jpg");
   PImage p5 =loadImage("5,jpg");
   PImage p6 =loadImage("6,jpg");
-  PShape n1 = createShape(SPHERE,23);
-  PShape n2 = createShape(SPHERE,46);
-  PShape n4 = createShape(SPHERE,34);
-  PShape n5 = createShape(SPHERE,13);
-  PShape n6 = createShape(SPHERE,32);
-  for(int i = 0; i<planets.size();i++)
-  {
-    Planet s = planets.get(i);
-    PImage planI = loadImage(s.Ref);
-    PShape planS = createShape(SPHERE,s.Size);
-    planS.setTexture(planI);
-  }
+ 
+  textures.add(p1);
+  textures.add(p2);
+  textures.add(p4);
+  textures.add(p5); 
+  textures.add(p6); 
 
 }
 earth e;
 Panel p;
+ArrayList<PImage> textures = new ArrayList<PImage>();
 
 ArrayList<Planet> planets = new ArrayList<Planet>();
   void loadData()
