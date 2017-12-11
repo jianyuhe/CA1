@@ -21,36 +21,29 @@ void setup()
   textures.add(p4);
   textures.add(p5); 
   textures.add(p6); 
-
+for(int i =0;i<5;i++)
+{
+  Planet s = new Planet(planetNames[i],xg[i],yg[i],zg[i],Size[i],textures.get(i));
+    planets.add(s);
+}
 }
 earth e;
 Panel p;
 ArrayList<PImage> textures = new ArrayList<PImage>();
 
 ArrayList<Planet> planets = new ArrayList<Planet>();
-  void loadData()
-  {
-      Table table = loadTable("data1.csv", "header");
-      for(TableRow r:table.rows())
-  {
-   
-    Planet planet = new Planet(r);
-    planets.add(planet);
-  }
-    for(Planet s:planets)
-  {
-    println(s.Name);
-  }
+String[] planetNames = {"mer", "sdr", "aas", "fgg","ijg"};
+Float[] xg = {300,223,1000,299,463};
+Float[] yg = {400,332,0,590,30};
+Float[] zg = {0,34,24,35,10};
+Float[] Size = {23,45,32,11,16};
 
-  }
   void drawPlanet()
   {
    
-    for(Planet s:planets)
+    for(int i =0; i<5; i++)
     {
-      
-   translate(s.xg,s.yg,s.zg);
-   shape(planS);
+      planets.get(i).drawPlanet();
     }
   }
 boolean keys[] = new boolean[1024];
@@ -87,6 +80,6 @@ void draw()
  p.drawRadar();
 // p.update();
  p.drawchar();
-
+drawPlanet();
 
 }
