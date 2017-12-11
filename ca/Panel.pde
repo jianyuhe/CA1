@@ -138,11 +138,15 @@ class Panel
  }
  }
  void drawQE()
- {
+ {fill(255,0,255);
       triangle(width/2, height-(height/3.5), width/2+width*.03f,height-(height/4),width/2-width*.03f,height-(height/4));
    
-   triangle(width/2, height-(height/4.2)+width*.06f+height*.7, width/2+width*.03f,height-(height/4.2)+width*.06f+height*.2,width/2-width*.03f,height-(height/4.2)+width*.06f+height*.2);
- }
+   triangle(width/2, height-(height/4.9)+width*.06f, width/2+width*.03f,height-(height/4.4)+width*.06f,width/2-width*.03f,height-(height/4.4)+width*.06f);
+   fill(20);
+   rect(width/2+width*.1f,height-(height/4.2)+width*.01f, width/2 - width*.3f, height/5);
+   fill(255);
+   text("Spacecraft in flight....", width/2+width*.1f+(width/2 - width*.3f)/2,height-(height/4.2)+width*.01f+height/10);
+ }      
  void drawchar()
  {
    float h = random(255);
