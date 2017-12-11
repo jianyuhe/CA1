@@ -15,6 +15,8 @@ void setup()
   PImage p5 =loadImage("5.jpg");
   PImage p6 =loadImage("6.jpg");
    PImage p7 =loadImage("7.jpg");
+   PImage p8 =loadImage("8.jpg");
+   PImage p9 =loadImage("9.jpg");
  
   textures.add(p1);
   textures.add(p2);
