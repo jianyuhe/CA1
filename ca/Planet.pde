@@ -5,7 +5,7 @@ class Planet
   float xg, yg, zg;
   float Size;
   PImage texture;
-  PShape plan;
+  PShape planet;
   Planet(String Name, float xg, float yg, float zg, float Size, PImage texture)
   {
     // this refers to the field
@@ -15,20 +15,20 @@ class Planet
     this.xg = xg;
     this.yg = yg;
     this.zg = zg;
-    plan = createShape(SPHERE,Size);
-    this.texture = texture;
+    planet = createShape(SPHERE,Size);
+     this.texture = texture;
   }
     
-  }
+  
  void drawPlanet()
  {
    pushMatrix();
    
    translate(xg,yg,zg);
-   plan.setTexture(texture);
-   shape(plan);
+   planet.setTexture(texture);
+   shape(planet);
    
    popMatrix();
  }
-  
+
 }

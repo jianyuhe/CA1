@@ -9,12 +9,12 @@ void setup()
   frameRate(100);
   bg = loadImage("bg.jpg");
   perspective(PI/3.0,(float)width/height,0.001,100000);
-  loadData();
-  PImage p1 =loadImage("1,jpg");
-  PImage p2 =loadImage("2,jpg");
-  PImage p4 =loadImage("4,jpg");
-  PImage p5 =loadImage("5,jpg");
-  PImage p6 =loadImage("6,jpg");
+
+  PImage p1 =loadImage("1.jpg");
+  PImage p2 =loadImage("2.jpg");
+  PImage p4 =loadImage("4.jpg");
+  PImage p5 =loadImage("5.jpg");
+  PImage p6 =loadImage("6.jpg");
  
   textures.add(p1);
   textures.add(p2);
@@ -33,10 +33,10 @@ ArrayList<PImage> textures = new ArrayList<PImage>();
 
 ArrayList<Planet> planets = new ArrayList<Planet>();
 String[] planetNames = {"mer", "sdr", "aas", "fgg","ijg"};
-Float[] xg = {300,223,1000,299,463};
-Float[] yg = {400,332,0,590,30};
-Float[] zg = {0,34,24,35,10};
-Float[] Size = {23,45,32,11,16};
+float[] xg = {300,223,1000,299,463};
+float[] yg = {400,332,0,590,30};
+float[] zg = {0,34,24,35,10};
+float[] Size = {23,45,32,11,16};
 
   void drawPlanet()
   {
@@ -78,7 +78,6 @@ void draw()
  p.drawMoveS();
  p.drawMoveA();
  p.drawRadar();
-// p.update();
  p.drawchar();
 drawPlanet();
 
