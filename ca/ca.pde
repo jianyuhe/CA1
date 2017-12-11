@@ -8,9 +8,24 @@ void setup()
   frameRate(100);
   bg = loadImage("bg.jpg");
   perspective(PI/3.0,(float)width/height,0.001,100000);
+  
 }
 earth e;
 Panel p;
+Planet s;
+ArrayList<Planet> planets = new ArrayList<Planet>();
+  void loadData()
+  {
+      Table table = loadTable("data1.csv", "header");
+      for(TableRow r:table.rows())
+  {
+   
+    Planet planet = new Planet(r);
+    planets.add(planet);
+  }
+  
+
+  }
 boolean keys[] = new boolean[1024];
 void keyPressed()
 {
@@ -45,5 +60,6 @@ void draw()
  p.drawRadar();
 // p.update();
  p.drawchar();
+
 
 }

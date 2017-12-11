@@ -74,7 +74,7 @@ class earth
     
     pushMatrix();
     rotateZ(theta*2);
-    translate(width/2-width*.3f,height/2,0);
+    translate(width/2-width*.5f,height/2,15);
     aster.setTexture(asterIma);
     shape(aster);
     
