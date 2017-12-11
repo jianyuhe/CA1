@@ -63,10 +63,7 @@ boolean checkKey(int k)
 {
   return keys[Character.toLowerCase(k)] || keys[Character.toUpperCase(k)]; 
 }
-void mousePressed()  
-{
 
-}
 void draw()
 {
  background(bg);
