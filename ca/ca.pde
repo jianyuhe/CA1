@@ -14,12 +14,14 @@ void setup()
   PImage p4 =loadImage("4.jpg");
   PImage p5 =loadImage("5.jpg");
   PImage p6 =loadImage("6.jpg");
+   PImage p7 =loadImage("7.jpg");
  
   textures.add(p1);
   textures.add(p2);
   textures.add(p4);
   textures.add(p5); 
   textures.add(p6); 
+  textures.add(p7);
 for(int i =0;i<5;i++)
 {
   Planet s = new Planet(planetNames[i],xg[i],yg[i],zg[i],Size[i],textures.get(i));
