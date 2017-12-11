@@ -20,17 +20,7 @@ class Panel
     {
     // rect(0, height-(height/4), width, height/4);
     Panel = createShape();
-        Panel.beginShape();
-        
-      Panel.vertex(0,height);
-      Panel.vertex(width, height);
-      Panel.vertex(width, height/2);
-      Panel.vertex(width-(width/8), height-(height/4));
-      Panel.vertex(width/2+width*.1f,height-(height/4));
-      Panel.vertex(width/2, height/2+height*.12);
-      Panel.vertex(width/2-width*.1f,height-(height/4));
-      Panel.vertex(width/8, height-(height/4));
-      Panel.vertex(0,height/2);
+
     panelBackg =loadImage("3.jpg");
    
          beginShape();
