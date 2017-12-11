@@ -24,7 +24,9 @@ void setup()
   textures.add(p5); 
   textures.add(p6); 
   textures.add(p7);
-for(int i =0;i<6;i++)
+  textures.add(p8);
+  textures.add(p9);
+for(int i =0;i<8;i++)
 {
   Planet s = new Planet(planetNames[i],xg[i],yg[i],zg[i],Size[i],textures.get(i));
     planets.add(s);
@@ -35,7 +37,7 @@ Panel p;
 ArrayList<PImage> textures = new ArrayList<PImage>();
 
 ArrayList<Planet> planets = new ArrayList<Planet>();
-String[] planetNames = {"mer", "sdr", "aas", "fgg","ijg","iio"};
+String[] planetNames = {"mer", "sdr", "aas", "fgg","ijg","iio","urh", "hhd"};
 float[] xg = {300,223,1000,299,463,0};
 float[] yg = {400,332,0,590,30,632};
 float[] zg = {0,34,24,35,10,64};
@@ -44,7 +46,7 @@ float[] Size = {23,45,32,11,16,26};
   void drawPlanet()
   {
    
-    for(int i =0; i<6; i++)
+    for(int i =0; i<8; i++)
     {
       planets.get(i).drawPlanet();
     }
