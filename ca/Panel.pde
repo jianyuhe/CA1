@@ -21,7 +21,7 @@ class Panel
     // rect(0, height-(height/4), width, height/4);
     Panel = createShape();
         Panel.beginShape();
-        Panel.fill(200);
+        
       Panel.vertex(0,height);
       Panel.vertex(width, height);
       Panel.vertex(width, height/2);
@@ -56,7 +56,7 @@ class Panel
    {
       moveW = createShape();
      moveW.beginShape();
-     moveW.fill(120);
+     moveW.fill(204, 102, 0);
     moveW.stroke(0);
      moveW.vertex(width/2, height-(height/4.2));
      moveW.vertex(width/2+width*.01f, height-(height/4.2)+width*.01f);
@@ -70,7 +70,7 @@ class Panel
    {
       moveD = createShape();
      moveD.beginShape();
-     moveD.fill(120);
+     moveD.fill(0,255,255);
     moveD.stroke(0);
     moveD.vertex(width/2+width*.01f, height-(height/4.2)+width*.02f);
     moveD.vertex(width/2+width*.02f,height-(height/4.2)+width*.02f);
@@ -84,7 +84,7 @@ class Panel
    {
       moveS = createShape();
      moveS.beginShape();
-     moveS.fill(120);
+     moveS.fill(204, 102, 0);
     moveS.stroke(0);
     moveS.vertex(width/2+width*.01f,height-(height/4.2)+width*.04f);
     moveS.vertex(width/2+width*.01f,height-(height/4.2)+width*.05f);
@@ -99,7 +99,7 @@ class Panel
    {
       moveA = createShape();
      moveA.beginShape();
-     moveA.fill(120);
+     moveA.fill(0,255,255);
     moveA.stroke(0);
     moveA.vertex(width/2-width*.01f, height-(height/4.2)+width*.02f);
     moveA.vertex(width/2-width*.02f,height-(height/4.2)+width*.02f);
@@ -137,10 +137,16 @@ class Panel
        line(cx, cy, x, y);
  }
  }
+ void drawQE()
+ {
+      triangle(width/2, height-(height/3.5), width/2+width*.03f,height-(height/4),width/2-width*.03f,height-(height/4));
+   
+   triangle(width/2, height-(height/4.2)+width*.06f+height*.7, width/2+width*.03f,height-(height/4.2)+width*.06f+height*.2,width/2-width*.03f,height-(height/4.2)+width*.06f+height*.2);
+ }
  void drawchar()
  {
-   
-   fill(0,150,0);
+   float h = random(255);
+   fill(h);
     Rh+=RcharSpeed;
    
       if(Rh == -30 || Rh == -190)
@@ -162,9 +168,12 @@ class Panel
   for(int i=0; i<10;i++)
   {
     float r = random(40);
-  line(width*0.2,(height-height*0.2f)+i*15,width*0.44,(height-height*0.2f)+i*15);
+    
+  
   ellipse(EX+r,(height-height*0.2f)+i*15,10,10);
    ellipse(EX1+r,(height-height*0.2f)+i*15,10,10);
+   stroke(30);
+   line(width*0.2,(height-height*0.2f)+i*15,width*0.44,(height-height*0.2f)+i*15);
   }
  }
  }

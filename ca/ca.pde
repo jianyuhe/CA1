@@ -83,6 +83,6 @@ translate(e.translateX, e.translateY, e.translateZ);
  p.drawMoveA();
  p.drawRadar();
  p.drawchar();
-
+p.drawQE();
 
 }
