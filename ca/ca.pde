@@ -9,7 +9,6 @@ void setup()
   frameRate(100);
   bg = loadImage("bg.jpg");
   perspective(PI/3.0,(float)width/height,0.001,100000);
-
   PImage p1 =loadImage("1.jpg");
   PImage p2 =loadImage("2.jpg");
   PImage p4 =loadImage("4.jpg");
